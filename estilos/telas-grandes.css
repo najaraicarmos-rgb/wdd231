@@ -1,27 +1,32 @@
-@media only screen and (min-width: 38rem) {
-
-    header,
-    main,
-    nav,
-    footer {
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    header {
-        grid-template-columns: 24px auto;
-    }
-
-    .hamburger {
+@media (min-width: 768px) {
+    #menu-hamburguer {
         display: none;
     }
 
-    .navegacao {
-        display: block;
+    nav {
+        display: block !important;
     }
 
-    .navegacao ul {
+    nav ul {
         display: flex;
+        justify-content: center;
     }
 
+    nav a {
+        border-bottom: none;
+        padding: 1rem 2rem;
+    }
+
+    .main-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .full-width {
+        grid-column: 1 / -1;
+    }
+
+    .grid-cursos {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

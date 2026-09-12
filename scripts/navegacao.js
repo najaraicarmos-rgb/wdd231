@@ -1,10 +1,7 @@
-const hamButton = document.querySelector('#ham-btn');
-const navigation = document.querySelector('nav');
+const btnMenu = document.querySelector('#menu-hamburguer');
+const navMenu = document.querySelector('#nav-menu');
 
-hamButton.addEventListener('click', () => {
-    navigation.classList.toggle('show');
-    hamButton.classList.toggle('show');
+btnMenu.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+    btnMenu.classList.toggle('open');
 });
-
-document.querySelector('#ano-atual').textContent = new Date().getFullYear();
-document.querySelector('#ultima-modificacao').textContent = `Última modificação: ${document.lastModified}`;

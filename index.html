@@ -1,57 +1,100 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Najara Carmo</title>
+    <title>Página Inicial - WDD231</title>
+    <meta name="description"
+        content="Página inicial do curso WDD231 apresentando projetos, informações pessoais e certificados de desenvolvimento web.">
+    <meta name="author" content="Najara Carmo">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="stylesheet" href="estilos/telas-pequenas.css">
     <link rel="stylesheet" href="estilos/telas-grandes.css">
+
+    <script src="scripts/navegacao.js" defer></script>
+    <script src="scripts/data.js" defer></script>
+    <script src="scripts/curso.js" defer></script>
 </head>
 
 <body>
-
     <header>
-        <img src="imagens/casa.svg" alt="Logo do Site" width="512">
-        <span>Najara Carmo</span>
-        <button id="ham-btn" class="hamburger"></button>
+        <div class="logo-container">
+            <img src="imagens/casa.svg" alt="Logotipo do site" width="44" height="44">
+            <span>Najara Carmo</span>
+        </div>
+        <button id="menu-hamburguer" aria-label="Abrir menu de navegação"></button>
     </header>
 
-    <nav id="nav-bar" class="navegacao">
+    <nav id="nav-menu">
         <ul>
-            <li><a href="#">Notícias & Eventos</a></li>
-            <li class="atual"><a href="#">Templos Dedicados</a></li>
-            <li><a href="#">Templos Anunciados</a></li>
+            <li><a href="index.html" class="active">Página Inicial</a></li>
+            <li><a href="chamber/index.html">Projeto da Câmara</a></li>
+            <li><a href="#">Projeto Final</a></li>
         </ul>
     </nav>
 
     <main>
-        <h1>Templos Dedicados</h1>
+        <h1>Página Inicial</h1>
+
+        <div class="main-grid">
+            <section class="card">
+                <h2>Sobre Mim</h2>
+                <div class="card-content">
+                    <section class="card">
+                        <h2>Sobre Mim</h2>
+                        <div class="card-content">
+                            <p>Olá! Meu nome é Najara Carmo, moro em Campinas e estudo Desenvolvimento de Software na
+                                BYU. Atualmente dedicada a aprender, praticar e progredir no desenvolvimento de
+                                software e em projetos de tecnologia.</p>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Recursos do Curso</h2>
+                <div class="card-content">
+                    <ul>
+                        <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Web Docs</a></li>
+                        <li><a href="https://w3schools.com" target="_blank" rel="noopener">W3Schools Tutorial</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="card full-width">
+                <h2>Certificados de Desenvolvimento Web</h2>
+                <div class="card-content">
+                    <div class="filtros-cursos">
+                        <button id="btn-todos" class="btn-filtro active">Todos</button>
+                        <button id="btn-wdd" class="btn-filtro">WDD</button>
+                        <button id="btn-cse" class="btn-filtro">CSE</button>
+                    </div>
+
+                    <div id="container-cursos" class="grid-cursos"></div>
+                    <p id="total-creditos" class="creditos-info"></p>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
         <div class="redes-sociais">
-            <a href="https://github.com" target="_blank" aria-label="GitHub">
-                <img src="imagens/github.svg" alt="GitHub" width="30" height="30">
+            <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="imagens/github.svg" alt="GitHub" width="28" height="28">
             </a>
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-                <img src="imagens/linkedin.svg" alt="LinkedIn" width="30" height="30">
-            </a>
-            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                <img src="imagens/facebook.svg" alt="Facebook" width="30" height="30">
-            </a>
-            <a href="https://x.com" target="_blank" aria-label="X">
-                <img src="imagens/x.svg" alt="X" width="30" height="30">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="imagens/linkedin.svg" alt="LinkedIn" width="28" height="28">
             </a>
         </div>
-        <p>&copy; <span id="ano-atual"></span> | Najara Carmo | Brasil</p>
-        <p id="ultima-modificacao"></p>
+        <p>&copy; <span id="anoAtual"></span> Najara Carmo | Campinas, Brasil</p>
+        <p id="ultimaModificacao"></p>
     </footer>
-
-    <script src="scripts/navegacao.js"></script>
-
 </body>
 
 </html>

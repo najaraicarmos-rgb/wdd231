@@ -1,97 +1,196 @@
-* {
-    font-family: "Josefin Sans", sans-serif;
-    box-sizing: border-box;
+:root {
+    --primary-color: #1a365d;
+    --secondary-color: #2b6cb0;
+    --completed-color: #276749;
+    --completed-bg: #c6f6d5;
+    --pending-color: #9b2c2c;
+    --pending-bg: #fed7d7;
+    --bg-color: #f7fafc;
+    --card-bg: #ffffff;
+    --text-color: #2d3748;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
 header {
-    display: grid;
-    grid-template-columns: 24px auto 44px;
-    padding: 5px 0 5px 10px;
-    column-gap: 8px;
-    border-bottom: solid 1px #ddd;
-    align-items: end;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header img {
-    display: block;
-    width: 100%;
-    height: auto;
-    padding-bottom: 4px;
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
-header span {
-    font-size: 1.2rem;
-    color: #3D405B;
-}
-
-.hamburger {
+#menu-hamburguer {
     background: none;
     border: none;
-    color: #3D405B;
-    cursor: pointer;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.hamburger::after {
-    content: "\2630";
+    color: white;
     font-size: 2rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
 }
 
-.hamburger.show::after {
-    content: "\00D7";
+#menu-hamburguer::before {
+    content: "☰";
 }
 
-.navegacao {
+#menu-hamburguer.open::before {
+    content: "✕";
+}
+
+nav {
     display: none;
+    background-color: var(--secondary-color);
 }
 
-.navegacao.show {
+nav.open {
     display: block;
 }
 
-.navegacao ul {
-    list-style-type: none;
-    padding: 0;
+nav ul {
+    list-style: none;
     margin: 0;
+    padding: 0;
 }
 
-.navegacao a {
+nav a {
     display: block;
-    padding: .8rem 10px;
-    color: #3D405B;
+    color: white;
     text-decoration: none;
-    border-bottom: solid 1px #ddd;
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s ease;
 }
 
-.navegacao li.atual {
-    background-color: #eee;
+nav a:hover,
+nav a.active {
+    background-color: var(--primary-color);
 }
 
-.navegacao a:hover {
-    background-color: #E07A5F;
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 h1 {
-    margin-left: 10px;
+    color: var(--primary-color);
+}
+
+.main-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+.card h2 {
+    background-color: var(--primary-color);
+    color: white;
+    margin: 0;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.filtros-cursos {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.btn-filtro {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--secondary-color);
+    background: white;
+    color: var(--secondary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-filtro.active,
+.btn-filtro:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.grid-cursos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+.curso-card {
+    padding: 0.75rem;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.curso-card.concluido {
+    background-color: var(--completed-bg);
+    color: var(--completed-color);
+    border: 1px solid var(--completed-color);
+}
+
+.curso-card.pendente {
+    background-color: var(--pending-bg);
+    color: var(--pending-color);
+    border: 1px solid var(--pending-color);
+}
+
+.creditos-info {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
 }
 
 footer {
-    background-color: #eee;
-    padding: 20px 10px;
+    background-color: var(--primary-color);
+    color: white;
     text-align: center;
-    margin-top: 20px;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
 }
 
-footer .redes-sociais {
+.redes-sociais {
     display: flex;
     justify-content: center;
-    align-items: center;
-    column-gap: 16px;
-    margin-bottom: 15px;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-footer .redes-sociais img {
-    display: block;
-    width: 30px;
-    height: auto;
+.redes-sociais a img {
+    filter: brightness(0) invert(1);
+}
+
+.redes-sociais a:hover {
+    opacity: 0.8;
 }
