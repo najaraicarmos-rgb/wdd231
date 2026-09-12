@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretório | Câmara de Comércio</title>
+    <meta name="description" content="Diretório de empresas e membros associados à Câmara de Comércio.">
+    <meta name="author" content="Najara Carmo">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="Diretório - Câmara de Comércio">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Conheça as empresas associadas à nossa Câmara de Comércio.">
+    <meta property="og:image" content="https://najaracarmo.github.io/wdd231/imagens/facebook.svg">
+    <meta property="og:url" content="https://najaracarmo.github.io/wdd231/chamber/diretorio.html">
+
+    <link rel="stylesheet" href="../estilos/normalize.css">
+    <link rel="stylesheet" href="styles/estilos.css">
+
+    <script src="scripts/principal.js" defer></script>
+    <script src="scripts/membros.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="../imagens/casa.svg" alt="Logo Câmara de Comércio" class="logo" width="40" height="40">
+            <h1>Câmara de Comércio</h1>
+        </div>
+        <button id="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="diretorio.html" class="active">Diretório</a></li>
+                <li><a href="junte-se.html">Junte-se</a></li>
+                <li><a href="descubra.html">Descubra</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Diretório de Empresas Associadas</h2>
+
+        <div class="view-controls">
+            <button id="grid-view" class="active-btn" aria-label="Exibir em Grade">Grade</button>
+            <button id="list-view" aria-label="Exibir em Lista">Lista</button>
+        </div>
+
+        <div id="membros-container" class="grid-layout"></div>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>Câmara de Comércio</strong></p>
+            <p>Rua Comercial, 500 - Centro</p>
+            <p>contato@camara.org | (19) 3000-0000</p>
+        </div>
+        <div class="footer-dev">
+            <p>&copy; <span id="ano-atual"></span> | Najara Carmo | WDD 231</p>
+            <p>Última modificação: <span id="ultima-modificacao"></span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

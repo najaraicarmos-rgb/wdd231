@@ -1,0 +1,189 @@
+:root {
+    --cor-primaria: #1b365d;
+    --cor-secundaria: #005a5a;
+    --cor-fundo: #f4f7f6;
+    --cor-texto: #111111;
+    --cor-card-bg: #ffffff;
+    --ouro: #8a6d00;
+    --prata: #4a5568;
+    --membro: #8c4310;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+}
+
+#menu-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+nav.open ul {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-primaria);
+    width: 100%;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    display: block;
+}
+
+nav a.active,
+nav a:hover {
+    background-color: var(--cor-secundaria);
+}
+
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.view-controls {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.view-controls button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--cor-primaria);
+    background: #ffffff;
+    color: var(--cor-primaria);
+    cursor: pointer;
+    margin: 0 0.25rem;
+    border-radius: 4px;
+}
+
+.view-controls button.active-btn {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.grid-layout .cartao-membro {
+    background: var(--cor-card-bg);
+    border: 1px solid #ccc;
+    padding: 1.25rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.grid-layout .logo-membro {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.list-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.list-layout .cartao-membro {
+    background: var(--cor-card-bg);
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.list-layout .logo-membro,
+.list-layout .descricao {
+    display: none;
+}
+
+.tag-nivel {
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.nivel-3 {
+    color: var(--ouro);
+}
+
+.nivel-2 {
+    color: var(--prata);
+}
+
+.nivel-1 {
+    color: var(--membro);
+}
+
+footer {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+@media (min-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+    }
+
+    .list-layout .cartao-membro {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

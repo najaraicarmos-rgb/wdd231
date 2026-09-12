@@ -1,0 +1,65 @@
+[
+  {
+    "nome": "TechInova Soluções",
+    "endereco": "Rua das Flores, 123 - Centro",
+    "telefone": "(19) 3456-7890",
+    "site": "https://example.com",
+    "imagem": "https://placehold.co/150x150/1b365d/ffffff?text=TechInova",
+    "nivel": 3,
+    "descricao": "Desenvolvimento de software e consultoria em TI."
+  },
+  {
+    "nome": "Café & Aroma",
+    "endereco": "Av. Brasil, 456 - Jardim Paulista",
+    "telefone": "(19) 3456-1122",
+    "site": "https://example.com",
+    "imagem": "https://placehold.co/150x150/1b365d/ffffff?text=Cafe+Aroma",
+    "nivel": 2,
+    "descricao": "Cafés especiais e espaço para reuniões de negócios."
+  },
+  {
+    "nome": "Logística Express",
+    "endereco": "Rodovia Anhanguera, Km 98",
+    "telefone": "(19) 3456-3344",
+    "site": "https://example.com",
+    "imagem": "https://placehold.co/150x150/1b365d/ffffff?text=Logistica",
+    "nivel": 1,
+    "descricao": "Transporte rápido e soluções em suprimentos."
+  },
+  {
+    "nome": "Contabilidade Alfa",
+    "endereco": "Rua Barão de Jaguara, 789",
+    "telefone": "(19) 3456-5566",
+    "site": "https://example.com",
+    "imagem": "https://placehold.co/150x150/1b365d/ffffff?text=Alfa",
+    "nivel": 3,
+    "descricao": "Gestão fiscal, financeira e empresarial."
+  },
+  {
+    "nome": "Verde Vida Paisagismo",
+    "endereco": "Av. Albino J. B. de Oliveira, 321",
+    "telefone": "(19) 3456-7788",
+    "site": "https://example.com",
+    "imagem": "https://placehold.co/150x150/1b365d/ffffff?text=Verde+Vida",
+    "nivel": 2,
+    "descricao": "Projetos paisagísticos e conservação ambiental."
+  },
+  {
+    "nome": "Construtora Horizonte",
+    "endereco": "Rua Coronel Quirino, 654",
+    "telefone": "(19) 3456-9900",
+    "site": "https://example.com",
+    "imagem": "https://placehold.co/150x150/1b365d/ffffff?text=Horizonte",
+    "nivel": 1,
+    "descricao": "Construção civil e projetos arquitetônicos."
+  },
+  {
+    "nome": "Solaris Energia Solar",
+    "endereco": "Av. Norte-Sul, 1010",
+    "telefone": "(19) 3456-4433",
+    "site": "https://example.com",
+    "imagem": "https://placehold.co/150x150/1b365d/ffffff?text=Solaris",
+    "nivel": 3,
+    "descricao": "Instalação e manutenção de painéis solares."
+  }
+]
