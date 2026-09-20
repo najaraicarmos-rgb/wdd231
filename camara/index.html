@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câmara de Comércio de Campinas</title>
+    <meta name="description" content="Página Inicial da Câmara de Comércio de Campinas.">
+
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/estilos.css">
+
+    <script src="scripts/principal.js" defer></script>
+    <script src="scripts/clima.js" defer></script>
+    <script src="scripts/destaques.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="imagens/casa.svg" alt="Logotipo da Câmara de Comércio de Campinas" width="40" height="40">
+            <h1>Câmara de Comércio</h1>
+        </div>
+        <button id="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="diretorio.html">Diretório</a></li>
+                <li><a href="junte-se.html">Junte-se</a></li>
+                <li><a href="descubra.html">Descubra</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-grid">
+        <section class="hero">
+            <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1200&q=80"
+                alt="Visão da região central de Campinas">
+            <div class="cta-overlay">
+                <h2>Impulsione o seu negócio em Campinas!</h2>
+                <a href="junte-se.html" class="btn-cta">Torne-se um Membro</a>
+            </div>
+        </section>
+
+        <section class="card eventos">
+            <h2>Próximos Eventos</h2>
+            <ul>
+                <li><strong>Encontro de Networking:</strong> Quinta-feira às 19h no Centro de Convenções.</li>
+                <li><strong>Feira de Negócios e Inovação:</strong> Sábado, das 09h às 17h no Parque Taquaral.</li>
+                <li><strong>Workshop: Transição Digital:</strong> Dia 25 às 14h (Online).</li>
+            </ul>
+        </section>
+
+        <section class="card clima">
+            <h2>Clima em Campinas</h2>
+            <div class="clima-container">
+                <p>Temperatura: <span id="temp-atual">--</span></p>
+                <figure>
+                    <img id="icone-clima" src="" alt="">
+                    <figcaption id="descr-clima"></figcaption>
+                </figure>
+            </div>
+            <h3>Previsão para 3 Dias</h3>
+            <ul id="previsao-lista">
+            </ul>
+        </section>
+
+        <section class="destaques-container">
+            <h2>Membros em Destaque</h2>
+            <div id="cards-destaque" class="grid-destaques">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>Câmara de Comércio</strong></p>
+            <p>Rua Comercial, 500 - Centro</p>
+            <p>contato@camara.org | (19) 3000-0000</p>
+        </div>
+        <div class="footer-dev">
+            <p>&copy; <span id="ano-atual"></span> | Najara Carmo | WDD 231</p>
+            <p>Última modificação: <span id="ultima-modificacao"></span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
