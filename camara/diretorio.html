@@ -1,38 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diretório | Câmara de Comércio</title>
-    <meta name="description" content="Diretório de empresas e membros associados à Câmara de Comércio.">
+    <title>Diretório de Empresas - Câmara de Comércio de Campinas</title>
+    <meta name="description"
+        content="Diretório de empresas associadas da Câmara de Comércio de Campinas. Encontre parceiros comerciais de níveis Ouro, Prata e Membro.">
     <meta name="author" content="Najara Carmo">
 
-    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+    <!-- Favicon -->
+    <link rel="icon" href="camara/imagens/casa.svg" type="image/svg+xml">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <meta property="og:title" content="Diretório - Câmara de Comércio">
-    <meta property="og:type" content="website">
-    <meta property="og:description"
-        content="Conheça as empresas associadas à nossa Câmara de Comércio com serviços de alta qualidade.">
-    <meta property="og:image" content="https://najaraicarmos-rgb.github.io/wdd231/chamber/imagens/og-image.jpg">
-    <meta property="og:url" content="https://najaraicarmos-rgb.github.io/wdd231/chamber/diretorio.html">
+    <link rel="stylesheet" href="camara/estilos/normalize.css">
+    <link rel="stylesheet" href="camara/estilos/estilos.css">
 
-    <link rel="stylesheet" href="estilos/normalize.css">
-    <link rel="stylesheet" href="estilos/estilos.css">
-
-    <script src="scripts/principal.js" defer></script>
-    <script src="scripts/membros.js" defer></script>
+    <script src="camara/scripts/principal.js" defer></script>
+    <script src="camara/scripts/membros.js" defer></script>
 </head>
 
 <body>
-
     <header>
         <div class="logo-container">
-            <img src="imagens/casa.svg" alt="Logo Câmara de Comércio" class="logo" width="40" height="40">
+            <img src="camara/imagens/casa.svg" alt="Logotipo da Câmara de Comércio de Campinas" width="40" height="40">
             <h1>Câmara de Comércio</h1>
         </div>
         <button id="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
@@ -47,14 +42,18 @@
     </header>
 
     <main>
-        <h2>Diretório de Empresas Associadas</h2>
+        <section class="diretorio-section">
+            <h2>Diretório de Empresas Associadas</h2>
 
-        <div class="view-controls">
-            <button id="grid-view" class="active-btn" aria-label="Exibir em Grade">Grade</button>
-            <button id="list-view" aria-label="Exibir em Lista">Lista</button>
-        </div>
+            <div class="view-buttons">
+                <button id="grid-view" class="active-btn">Grade</button>
+                <button id="list-view">Lista</button>
+            </div>
 
-        <div id="membros-container" class="grid-layout"></div>
+            <div id="membros-container" class="grid-layout">
+                <!-- Os cartões dos membros serão carregados aqui via JavaScript -->
+            </div>
+        </section>
     </main>
 
     <footer>
