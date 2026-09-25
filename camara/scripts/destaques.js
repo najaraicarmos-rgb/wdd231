@@ -14,7 +14,13 @@ async function buscarMembrosDestaque() {
 }
 
 function exibirDestaques(membros) {
-    const membrosElegiveis = membros.filter(membro => membro.nivel === 2 || membro.nivel === 3);
+    const membrosElegiveis = membros.filter(membro => {
+        const nivel = membro.nivel;
+        return nivel === 2 || nivel === 3 ||
+            nivel === 'Prata' || nivel === 'Ouro' ||
+            nivel === 'Silver' || nivel === 'Gold';
+    });
+
     const destaquesEmbaralhados = membrosElegiveis.sort(() => 0.5 - Math.random());
     const membrosSelecionados = destaquesEmbaralhados.slice(0, 3);
 
@@ -33,7 +39,8 @@ function exibirDestaques(membros) {
         nome.textContent = membro.nome;
 
         let nivel = document.createElement('p');
-        nivel.textContent = membro.nivel === 3 ? 'Nível Ouro' : 'Nível Prata';
+        const nivelTexto = (membro.nivel === 3 || membro.nivel === 'Ouro' || membro.nivel === 'Gold') ? 'Nível Ouro' : 'Nível Prata';
+        nivel.textContent = nivelTexto;
 
         let descricao = document.createElement('p');
         descricao.textContent = membro.descricao || '';

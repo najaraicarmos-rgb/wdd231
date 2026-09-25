@@ -1,5 +1,23 @@
 const url = 'https://byui-cse.github.io/cse-ww-program-pt/data/profetas-dos-ultimos-dias.json';
 const cartoes = document.querySelector('#cartoes');
+const infosDoCurso = document.querySelector('#infos-do-curso');
+
+function exibirDetalhesProfeta(profeta) {
+    infosDoCurso.innerHTML = '';
+    infosDoCurso.innerHTML = `
+        <button id="fecharModal">❌</button>
+        <h2>${profeta.nome} ${profeta.sobrenome}</h2>
+        <p><strong>Data de Nascimento:</strong> ${profeta.datadenascimento}</p>
+        <p><strong>Local de Nascimento:</strong> ${profeta.localnascimento}</p>
+        <img src="${profeta.imagemurl}" alt="Retrato de ${profeta.nome} ${profeta.sobrenome}" width="200">
+    `;
+    infosDoCurso.showModal();
+
+    const fecharModal = document.querySelector('#fecharModal');
+    fecharModal.addEventListener("click", () => {
+        infosDoCurso.close();
+    });
+}
 
 const exibirProfetas = (profetas) => {
     profetas.forEach((profeta) => {
@@ -23,6 +41,10 @@ const exibirProfetas = (profetas) => {
         cartao.appendChild(dataNascimento);
         cartao.appendChild(localNascimento);
         cartao.appendChild(retrato);
+
+        cartao.addEventListener('click', () => {
+            exibirDetalhesProfeta(profeta);
+        });
 
         cartoes.appendChild(cartao);
     });

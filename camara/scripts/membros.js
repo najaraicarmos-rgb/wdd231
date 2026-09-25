@@ -9,7 +9,8 @@ async function carregarMembros() {
         if (!resposta.ok) {
             throw new Error(`Erro HTTP: ${resposta.status}`);
         }
-        const membros = await resposta.json();
+        const dados = await resposta.json();
+        const membros = dados.membros || dados;
         exibirMembros(membros);
     } catch (erro) {
         console.error('Erro ao carregar o arquivo JSON:', erro);
