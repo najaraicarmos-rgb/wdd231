@@ -4,25 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Câmara de Comércio de Campinas</title>
+
     <meta name="description"
         content="Página Inicial oficial da Câmara de Comércio de Campinas com diretório de empresas, clima e eventos locais.">
     <meta name="author" content="Najara Carmo">
 
-
     <link rel="icon" href="imagens/casa.svg" type="image/svg+xml">
-
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-
     <meta property="og:title" content="Câmara de Comércio de Campinas">
     <meta property="og:description"
         content="Conheça a Câmara de Comércio de Campinas, encontre empresas associadas e confira o clima e eventos da região.">
     <meta property="og:url" content="https://najaraicarmos-rgb.github.io/wdd231/camara/index.html">
-    <meta property="og:image" content="https://najaraicarmos-rgb.github.io/wdd231/camara/imagens/casa.svg">
+    <meta property="og:image"
+        content="https://upload.wikimedia.org/wikipedia/commons/2/2a/250717_Fotos_Centro_de_Campinas_foto_Carlos_Bassan_004_%2836029962481%29.jpg">
 
     <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="stylesheet" href="estilos/estilos.css">
@@ -33,12 +33,15 @@
 </head>
 
 <body>
+
     <header>
         <div class="logo-container">
             <img src="imagens/casa.svg" alt="Logotipo da Câmara de Comércio de Campinas" width="40" height="40">
-            <h1>Câmara de Comércio</h1>
+            <span>Câmara de Comércio</span>
         </div>
+
         <button id="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+
         <nav id="nav-menu">
             <ul>
                 <li><a href="index.html" class="active">Início</a></li>
@@ -50,9 +53,13 @@
     </header>
 
     <main class="home-grid">
+
+        <h1>Câmara de Comércio de Campinas</h1>
+
         <section class="hero">
-            <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1200&q=80"
-                alt="Visão da região central de Campinas" width="1200" height="800" loading="lazy">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/250717_Fotos_Centro_de_Campinas_foto_Carlos_Bassan_004_%2836029962481%29.jpg"
+                alt="Vista do Centro de Campinas" width="1200" height="800">
+
             <div class="cta-overlay">
                 <h2>Impulsione o seu negócio em Campinas!</h2>
                 <a href="junte-se.html" class="btn-cta">Torne-se um Membro</a>
@@ -61,44 +68,63 @@
 
         <section class="card eventos">
             <h2>Próximos Eventos</h2>
+
             <ul>
-                <li><strong>Encontro de Networking:</strong> Quinta-feira às 19h no Centro de Convenções.</li>
-                <li><strong>Feira de Negócios e Inovação:</strong> Sábado, das 09h às 17h no Parque Taquaral.</li>
-                <li><strong>Workshop: Transição Digital:</strong> Dia 25 às 14h (Online).</li>
+                <li>
+                    <strong>Encontro de Networking:</strong>
+                    Quinta-feira às 19h no Centro de Convenções.
+                </li>
+
+                <li>
+                    <strong>Feira de Negócios e Inovação:</strong>
+                    Sábado, das 09h às 17h no Parque Taquaral.
+                </li>
+
+                <li>
+                    <strong>Workshop: Transição Digital:</strong>
+                    Dia 25 às 14h (Online).
+                </li>
             </ul>
         </section>
 
         <section class="card clima">
             <h2>Clima em Campinas</h2>
+
             <div class="clima-container">
                 <p>Temperatura: <span id="temp-atual">--</span></p>
+
                 <figure>
-                    <img id="icone-clima" src="" alt="Ícone das condições meteorológicas atuais" width="50" height="50">
+                    <img id="icone-clima" src="imagens/clima-placeholder.svg"
+                        alt="Ícone das condições meteorológicas atuais" width="50" height="50">
                     <figcaption id="descr-clima"></figcaption>
                 </figure>
             </div>
+
             <h3>Previsão para 3 Dias</h3>
-            <ul id="previsao-lista">
-            </ul>
+
+            <ul id="previsao-lista"></ul>
         </section>
 
         <section class="destaques-container">
             <h2>Membros em Destaque</h2>
-            <div id="cards-destaque" class="grid-destaques">
-            </div>
+            <div id="cards-destaque" class="grid-destaques"></div>
         </section>
+
     </main>
 
     <footer>
+
         <div class="footer-info">
             <p><strong>Câmara de Comércio</strong></p>
             <p>Rua Comercial, 500 - Centro</p>
             <p>contato@camara.org | (19) 3000-0000</p>
         </div>
+
         <div class="footer-dev">
             <p>&copy; <span id="ano-atual"></span> | Najara Carmo | WDD 231</p>
             <p>Última modificação: <span id="ultima-modificacao"></span></p>
         </div>
+
     </footer>
 
 </body>

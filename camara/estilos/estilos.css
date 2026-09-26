@@ -1,3 +1,84 @@
+:root {
+    --cor-principal: #1b365d;
+    --cor-secundaria: #008080;
+    --cor-clara: #f4f6f8;
+    --cor-branca: #ffffff;
+    --cor-texto: #222222;
+    --sombra: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-clara);
+    line-height: 1.5;
+}
+
+header {
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-container img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-container h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    color: var(--cor-branca);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: var(--cor-branca);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.5rem;
+}
+
+nav a:hover,
+nav a.active {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
 .home-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -8,7 +89,6 @@
     grid-column: 1 / -1;
     position: relative;
     width: 100%;
-    max-height: 450px;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: var(--sombra);
@@ -18,44 +98,175 @@
     width: 100%;
     height: auto;
     display: block;
-    object-fit: cover;
 }
 
 .cta-overlay {
     position: absolute;
     bottom: 25px;
     left: 25px;
-    background-color: rgba(27, 54, 93, 0.9);
+    background-color: rgba(27, 54, 93, 0.92);
     padding: 1.5rem;
     border-radius: 6px;
-    color: #ffffff;
+    color: var(--cor-branca);
     max-width: 380px;
 }
 
 .cta-overlay h2 {
-    color: #ffffff;
+    color: var(--cor-branca);
     font-size: 1.4rem;
-    margin-bottom: 0.8rem;
-    text-align: left;
+    margin: 0 0 0.8rem;
 }
 
 .btn-cta {
     display: inline-block;
     background-color: var(--cor-secundaria);
-    color: #ffffff;
-    padding: 0.6rem 1.2rem;
+    color: var(--cor-branca);
+    padding: 0.7rem 1.2rem;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
 }
 
-.btn-cta:hover {
-    background-color: #004040;
+.btn-cta:hover,
+.btn-cta:focus {
+    background-color: #006666;
+}
+
+.card,
+.destaques-container {
+    background-color: var(--cor-branca);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+}
+
+.card h2,
+.destaques-container h2 {
+    color: var(--cor-principal);
+    margin-top: 0;
+}
+
+.eventos ul {
+    padding-left: 1.2rem;
+}
+
+.eventos li {
+    margin-bottom: 0.8rem;
+}
+
+.clima-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.clima figure {
+    margin: 0;
+    text-align: center;
+}
+
+.clima img {
+    width: 50px;
+    height: 50px;
+}
+
+.clima h3 {
+    color: var(--cor-principal);
+    margin-top: 1.5rem;
+}
+
+#previsao-lista {
+    padding-left: 1.2rem;
+}
+
+#previsao-lista li {
+    margin-bottom: 0.5rem;
+}
+
+.destaques-container {
+    grid-column: 1 / -1;
+}
+
+.grid-destaques {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.grid-destaques img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    margin-top: 2rem;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
 }
 
 @media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
     .home-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hero {
+        grid-column: 1;
+    }
+
+    .cta-overlay {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        max-width: none;
+        border-radius: 0;
+    }
+
+    .grid-destaques {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 1rem 0.75rem;
+    }
+
+    .cta-overlay {
+        padding: 1rem;
+    }
+
+    .cta-overlay h2 {
+        font-size: 1.15rem;
+    }
+
+    .btn-cta {
+        width: 100%;
+        text-align: center;
     }
 }
