@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Associe-se - Câmara de Comércio</title>
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/telas-grandes.css">
+</head>
+<body>
+    <header>
+        <div class="header-box">
+            <span class="logo">🏛️</span>
+            <h1>Câmara de Comércio</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="diretorio.html">Diretório</a></li>
+                <li><a href="associacao.html" class="active">Associe-se</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="join-main">
+        <h2>Formulário de Associação</h2>
+        
+        <div class="join-container">
+            <form method="get" action="agradecimento.html" class="join-form">
+                <label>
+                    Nome:
+                    <input type="text" name="nome" autocomplete="given-name" required title="Insira seu primeiro nome">
+                </label>
+
+                <label>
+                    Sobrenome:
+                    <input type="text" name="sobrenome" autocomplete="family-name" required title="Insira seu sobrenome">
+                </label>
+
+                <label>
+                    Cargo na Organização:
+                    <input type="text" name="cargo" autocomplete="organization-title" pattern="[A-Za-zÀ-ÿ\s-]{7,}" title="Deve conter apenas letras, hífens e espaços, com no mínimo 7 caracteres" required>
+                </label>
+
+                <label>
+                    E-mail:
+                    <input type="email" name="email" autocomplete="email" placeholder="exemplo@email.com" required title="Insira um e-mail válido">
+                </label>
+
+                <label>
+                    Número de Celular:
+                    <input type="tel" name="telefone" autocomplete="tel" required title="Insira seu número de telefone/celular">
+                </label>
+
+                <label>
+                    Nome da Empresa/Organização:
+                    <input type="text" name="organizacao" autocomplete="organization" required title="Insira o nome da sua organização">
+                </label>
+
+                <label>
+                    Nível de Associação:
+                    <select name="nivel" required title="Selecione o nível de associação">
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="np">Associação NP (Sem fins lucrativos - Gratuito)</option>
+                        <option value="bronze">Associação Bronze</option>
+                        <option value="silver">Associação Prata</option>
+                        <option value="gold">Associação Ouro</option>
+                    </select>
+                </label>
+
+                <label>
+                    Descrição da Atividade/Organização:
+                    <textarea name="descricao" title="Descreva brevemente sua atividade ou organização"></textarea>
+                </label>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <button type="submit" class="submit-btn">Prosseguir com a Associação</button>
+            </form>
+
+            <aside class="membership-cards">
+                <div class="card animate-card">
+                    <h3>NP</h3>
+                    <p>Para organizações sem fins lucrativos.</p>
+                    <button type="button" class="modal-btn" onclick="document.getElementById('modal-np').showModal()">Saiba mais</button>
+                </div>
+                <div class="card animate-card">
+                    <h3>Bronze</h3>
+                    <p>Benefícios básicos para pequenos negócios.</p>
+                    <button type="button" class="modal-btn" onclick="document.getElementById('modal-bronze').showModal()">Saiba mais</button>
+                </div>
+                <div class="card animate-card">
+                    <h3>Prata</h3>
+                    <p>Vantagens avançadas e destaque em eventos.</p>
+                    <button type="button" class="modal-btn" onclick="document.getElementById('modal-silver').showModal()">Saiba mais</button>
+                </div>
+                <div class="card animate-card">
+                    <h3>Ouro</h3>
+                    <p>Acesso total, publicidade máxima e eventos exclusivos.</p>
+                    <button type="button" class="modal-btn" onclick="document.getElementById('modal-gold').showModal()">Saiba mais</button>
+                </div>
+            </aside>
+        </div>
+
+        <dialog id="modal-np">
+            <h3>Associação NP</h3>
+            <p>Gratuito para instituições sem fins lucrativos. Inclui participação em reuniões gerais e diretório básico.</p>
+            <button onclick="document.getElementById('modal-np').close()">Fechar</button>
+        </dialog>
+
+        <dialog id="modal-bronze">
+            <h3>Associação Bronze</h3>
+            <p>Taxa básica. Inclui descontos em treinamentos mensais e listagem padrão no diretório.</p>
+            <button onclick="document.getElementById('modal-bronze').close()">Fechar</button>
+        </dialog>
+
+        <dialog id="modal-silver">
+            <h3>Associação Prata</h3>
+            <p>Taxa intermediária. Inclui destaque nas páginas de eventos, convites para workshops e publicidade prioritária.</p>
+            <button onclick="document.getElementById('modal-silver').close()">Fechar</button>
+        </dialog>
+
+        <dialog id="modal-gold">
+            <h3>Associação Ouro</h3>
+            <p>Taxa premium. Posições de destaque na página inicial, acesso a todos os eventos especiais e patrocínio em destaque.</p>
+            <button onclick="document.getElementById('modal-gold').close()">Fechar</button>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Câmara de Comércio</p>
+    </footer>
+
+    <script>
+        document.getElementById('timestamp').value = new Date().toISOString();
+    </script>
+</body>
+</html>

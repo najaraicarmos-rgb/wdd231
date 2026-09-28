@@ -30,3 +30,18 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+@media (min-width: 768px) {
+    .join-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .join-form {
+        flex: 2;
+    }
+
+    .membership-cards {
+        flex: 1;
+    }
+}

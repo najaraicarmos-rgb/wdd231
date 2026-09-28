@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado - Câmara de Comércio</title>
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/telas-grandes.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-box">
+            <span class="logo">🏛️</span>
+            <h1>Câmara de Comércio</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="diretorio.html">Diretório</a></li>
+                <li><a href="associacao.html">Associe-se</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="thankyou-main">
+        <h2>Obrigado pela sua solicitação de associação!</h2>
+        <p>Recebemos as suas informações com sucesso. Abaixo estão os detalhes registados:</p>
+
+        <div id="results" class="results-container"></div>
+
+        <p><a href="index.html" class="back-link">Voltar para a Página Inicial</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Câmara de Comércio</p>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const resultsContainer = document.getElementById('results');
+
+        function getParam(name) {
+            return urlParams.get(name) ? decodeURIComponent(urlParams.get(name)) : 'Não informado';
+        }
+
+        const nome = getParam('nome');
+        const sobrenome = getParam('sobrenome');
+        const cargo = getParam('cargo');
+        const email = getParam('email');
+        const telefone = getParam('telefone');
+        const organizacao = getParam('organizacao');
+        const nivel = getParam('nivel');
+        const descricao = getParam('descricao');
+        const timestamp = getParam('timestamp');
+
+        resultsContainer.innerHTML = `
+            <p><strong>Nome Completo:</strong> ${nome} ${sobrenome}</p>
+            <p><strong>Cargo na Organização:</strong> ${cargo}</p>
+            <p><strong>E-mail:</strong> ${email}</p>
+            <p><strong>Número de Celular:</strong> ${telefone}</p>
+            <p><strong>Empresa/Organização:</strong> ${organizacao}</p>
+            <p><strong>Nível de Associação:</strong> ${nivel.toUpperCase()}</p>
+            <p><strong>Descrição:</strong> ${descricao}</p>
+            <p><strong>Data e Hora do Registo:</strong> ${timestamp}</p>
+        `;
+    </script>
+</body>
+
+</html>
