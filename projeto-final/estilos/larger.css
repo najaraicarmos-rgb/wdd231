@@ -10,7 +10,7 @@
     }
 
     nav {
-        display: block !important;
+        display: block;
         width: auto;
         margin-top: 0;
     }
