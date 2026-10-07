@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "nome": "Samambaia Americana",
+        "ambiente": "Sombra Parcial",
+        "rega": "Moderada",
+        "descricao": "Ótima para ambientes internos frescos e úmidos."
+    },
+    {
+        "id": 2,
+        "nome": "Espada-de-São-Jorge",
+        "ambiente": "Sombra ou Sol Pleno",
+        "rega": "Baixa",
+        "descricao": "Resistente e excelente para purificação do ar."
+    },
+    {
+        "id": 3,
+        "nome": "Jiboia",
+        "ambiente": "Sombra Parcial",
+        "rega": "Moderada",
+        "descricao": "Planta trepadeira de fácil cultivo e super charmosa."
+    },
+    {
+        "id": 4,
+        "nome": "Zamioculca",
+        "ambiente": "Pouca Luz",
+        "rega": "Baixa",
+        "descricao": "Muito resistente à falta de água e ambientes fechados."
+    },
+    {
+        "id": 5,
+        "nome": "Costela-de-Adão",
+        "ambiente": "Luz Indireta",
+        "rega": "Moderada",
+        "descricao": "Folhas grandes e recortadas que dão um toque tropical."
+    },
+    {
+        "id": 6,
+        "nome": "lírio-da-paz",
+        "ambiente": "Sombra",
+        "rega": "Alta",
+        "descricao": "Adora solo úmido e floresce lindamente na sombra."
+    },
+    {
+        "id": 7,
+        "nome": "Suculenta Echeveria",
+        "ambiente": "Sol Pleno",
+        "rega": "Baixa",
+        "descricao": "Armazena água nas folhas, ideal para lugares ensolarados."
+    },
+    {
+        "id": 8,
+        "nome": "Cacto Coroa-de-Frade",
+        "ambiente": "Sol Pleno",
+        "rega": "Baixa",
+        "descricao": "Exige poucos cuidados e gosta de bastante claridade."
+    },
+    {
+        "id": 9,
+        "nome": "Peperômia",
+        "ambiente": "Luz Indireta",
+        "rega": "Moderada",
+        "descricao": "Folhas delicadas e compactas, perfeitas para estantes."
+    },
+    {
+        "id": 10,
+        "nome": "Maranta",
+        "ambiente": "Sombra Parcial",
+        "rega": "Alta",
+        "descricao": "Conhecida pelas folhas coloridas que se movem com a luz."
+    },
+    {
+        "id": 11,
+        "nome": "Bromélia",
+        "ambiente": "Luz Indireta",
+        "rega": "Moderada",
+        "descricao": "Forma um reservatório central de água nas folhas."
+    },
+    {
+        "id": 12,
+        "nome": "Antúrio",
+        "ambiente": "Sombra Parcial",
+        "rega": "Moderada",
+        "descricao": "Famoso pelas flores vermelhas brilhantes e duradouras."
+    },
+    {
+        "id": 13,
+        "nome": "Clorofito",
+        "ambiente": "Luz Indireta",
+        "rega": "Moderada",
+        "descricao": "Resistente e produz pequenas mudas pendentes."
+    },
+    {
+        "id": 14,
+        "nome": "Kalanchoe",
+        "ambiente": "Sol Pleno",
+        "rega": "Baixa",
+        "descricao": "Florida e colorida, ótima para decorar janelas ensolaradas."
+    },
+    {
+        "id": 15,
+        "nome": "Violeta Africana",
+        "ambiente": "Luz Indireta",
+        "rega": "Moderada",
+        "descricao": "Flores delicadas que exigem rega direto no pratinho."
+    }
+]

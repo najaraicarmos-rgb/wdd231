@@ -1,0 +1,144 @@
+:root {
+    --verde-floresta: #2d5a27;
+    --terracota: #c85a32;
+    --bege-claro: #f4f1ea;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bege-claro);
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--verde-floresta);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--bege-claro);
+    text-decoration: underline;
+}
+
+#menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.plant-card {
+    background-color: #ffffff;
+    border: 1px solid #e0dcd0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.plant-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.plant-card h3 {
+    color: var(--verde-floresta);
+    margin-bottom: 0.75rem;
+}
+
+.plant-card p {
+    margin-bottom: 0.5rem;
+    color: #444444;
+}
+
+footer {
+    background-color: var(--verde-floresta);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: var(--bege-claro);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #menu-btn {
+        display: block;
+        position: absolute;
+        right: 1.5rem;
+        top: 1.2rem;
+    }
+
+    nav {
+        width: 100%;
+        display: none;
+        margin-top: 1rem;
+    }
+
+    nav.open {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
