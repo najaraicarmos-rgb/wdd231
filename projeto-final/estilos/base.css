@@ -17,8 +17,8 @@ header {
     color: white;
     padding: 1rem 2rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     position: relative;
 }
 
@@ -31,9 +31,16 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
-    margin: 0;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1rem 0 0 0;
     padding: 0;
+    display: none;
+}
+
+nav.open {
+    display: block;
+    width: 100%;
 }
 
 nav a {
@@ -49,12 +56,15 @@ nav a.active {
 }
 
 #menu-btn {
-    display: none;
+    display: block;
     background: none;
     border: none;
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.2rem;
 }
 
 main {
@@ -112,33 +122,4 @@ footer {
 footer a {
     color: var(--bege-claro);
     text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    #menu-btn {
-        display: block;
-        position: absolute;
-        right: 1.5rem;
-        top: 1.2rem;
-    }
-
-    nav {
-        width: 100%;
-        display: none;
-        margin-top: 1rem;
-    }
-
-    nav.open {
-        display: block;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 0.75rem;
-    }
 }

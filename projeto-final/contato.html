@@ -5,15 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verde Lar - Contato</title>
-    <meta name="description" content="Entre em contato com o Verde Lar para dúvidas e sugestões sobre jardinagem.">
+    <meta name="description" content="Entre em contato com o Verde Lar para tirar dúvidas sobre cultivo de plantas.">
     <meta name="author" content="Najara Carmo">
+
+    <meta property="og:title" content="Verde Lar - Contato">
+    <meta property="og:description"
+        content="Fale connosco para enviar dúvidas ou sugestões sobre jardinagem e plantas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://najaraicarmos-rgb.github.io/wdd231/projeto-final/contato.html">
+    <meta property="og:image" content="https://najaraicarmos-rgb.github.io/wdd231/projeto-final/imagens/preview.png">
+
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="stylesheet" href="estilos/base.css">
+    <link rel="stylesheet" href="estilos/larger.css">
+
     <script type="module" src="scripts/main.js" defer></script>
 </head>
 
@@ -42,9 +53,7 @@
                 <label for="mensagem">Dúvida ou Mensagem:</label>
                 <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
 
-                <button type="submit"
-                    style="margin-top: 1rem; padding: 0.75rem 1.5rem; background-color: var(--terracota); color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Enviar
-                    Mensagem</button>
+                <button type="submit">Enviar Mensagem</button>
             </form>
         </section>
     </main>
